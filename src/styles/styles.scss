@@ -1,0 +1,19 @@
+@use './variables' as v;
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+body {
+    font-family: v.$font-primary;
+    font-size: v.$font-size-sm;
+}

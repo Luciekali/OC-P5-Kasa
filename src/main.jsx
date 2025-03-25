@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Layout from './components/Layout/Layout'
+import './styles/styles.scss'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

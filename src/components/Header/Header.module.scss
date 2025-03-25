@@ -1,0 +1,23 @@
+@use '../../styles/variables' as v;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: v.$margin-small v.$margin-large v.$margin-medium v.$margin-large;
+
+    nav {
+        display: flex;
+        gap: v.$gap;
+
+        a {
+
+            &:hover,
+            &:focus,
+            &:active,
+            &:visited {
+                text-decoration: underline;
+            }
+        }
+    }
+}
