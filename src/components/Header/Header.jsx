@@ -1,16 +1,21 @@
 import logo from '../../assets/logo.svg'
-import { Link } from 'react-router'
-import './Header.module.scss'
+import { Link, useMatch } from 'react-router'
+import header from './Header.module.scss'
 
-function Header() {
+const Header = () => {
+    //***** nav active */
+    const isHomeActive = useMatch("/");
+    const isAboutActive = useMatch("/about");
+
+
     return (
         <header>
-            <Link to='/'>
+            <Link to='/' >
                 <img src={logo} alt="Logo Kasa" />
             </Link>
             <nav>
-                <Link to='/'>Accueil</Link>
-                <Link to='/about'>A Propos</Link>
+                <Link to='/' className={isHomeActive ? header.active : undefined}> Accueil </Link>
+                <Link to='/about' className={isAboutActive ? header.active : undefined} > A Propos </Link>
             </nav>
         </header>
     )
