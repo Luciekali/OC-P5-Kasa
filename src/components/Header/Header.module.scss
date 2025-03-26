@@ -6,9 +6,27 @@ header {
     justify-content: space-between;
     margin: v.$margin-small v.$margin-large v.$margin-medium v.$margin-large;
 
+    @media (max-width: v.$breakpoint-tablet) {
+        margin: v.$margin-mobile-s v.$margin-mobile-s v.$margin-mobile-sm v.$margin-mobile-s;
+    }
+
+    svg {
+        color: v.$primary-color;
+
+
+        @media (max-width: v.$breakpoint-tablet) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+
     nav {
         display: flex;
         gap: v.$gap;
+
+        @media (max-width: v.$breakpoint-mobile) {
+            gap: v.$gap-mobile;
+        }
 
         a {
 
@@ -18,10 +36,18 @@ header {
             &:visited {
                 text-decoration: underline;
             }
+
+            @media (max-width: v.$breakpoint-mobile) {
+                text-transform: uppercase;
+                font-size: v.$font-size-sm-mobile;
+
+            }
         }
     }
 
     .active {
         text-decoration: underline;
     }
+
+
 }
