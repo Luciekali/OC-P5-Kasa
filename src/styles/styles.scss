@@ -1,5 +1,12 @@
 @use './variables' as v;
 
+
+body {
+    font-family: v.$font-primary;
+    font-size: v.$font-size-sm;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -13,8 +20,10 @@ a {
     }
 }
 
-body {
-    font-family: v.$font-primary;
-    font-size: v.$font-size-sm;
+h1 {
+    color: v.$secondary-color;
     margin: 0;
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-bold;
+    position: relative;
 }

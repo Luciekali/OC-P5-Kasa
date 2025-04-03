@@ -2,7 +2,7 @@ import Svg from '../Svg/Svg'
 import { Link, useMatch } from 'react-router'
 import header from './Header.module.scss'
 
-const Header = () => {
+function Header() {
     //***** nav active */
     const isHomeActive = useMatch("/");
     const isAboutActive = useMatch("/about");

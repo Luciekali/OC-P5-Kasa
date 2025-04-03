@@ -13,7 +13,6 @@ header {
     svg {
         color: v.$primary-color;
 
-
         @media (max-width: v.$breakpoint-tablet) {
             width: 145px;
             height: 47px;

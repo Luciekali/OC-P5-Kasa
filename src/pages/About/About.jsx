@@ -1,5 +1,10 @@
+import Banner from '../../components/Banner/Banner'
+import styles from './About.module.scss'
+
 function About() {
-    return <p>About page</p>
+    return (
+        <Banner className={styles.banner} />
+    )
 }
 
 export default About
