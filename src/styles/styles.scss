@@ -7,6 +7,25 @@ body {
     margin: 0;
 }
 
+
+
+h1 {
+    color: v.$secondary-color;
+    margin: 0;
+    font-size: v.$font-size-xl;
+    font-weight: v.$font-weight-bold;
+    position: relative;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        padding-left: v.$padding-16;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        font-size: v.$font-size-xxl-mobile;
+
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -20,10 +39,6 @@ a {
     }
 }
 
-h1 {
-    color: v.$secondary-color;
-    margin: 0;
-    font-size: v.$font-size-xl;
-    font-weight: v.$font-weight-bold;
-    position: relative;
+ul {
+    list-style-type: none;
 }

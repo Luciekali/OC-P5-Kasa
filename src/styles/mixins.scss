@@ -1,0 +1,10 @@
+@use './variables' as v;
+
+@mixin text-primary {
+    color: v.$secondary-color;
+    background-color: v.$primary-color;
+    font-size: v.$font-size-sm;
+    font-weight: v.$font-weight-bold;
+    padding: 10px 0px 10px 10px;
+    margin: 0px;
+}

@@ -1,0 +1,78 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.logements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: v.$background-light;
+    border-radius: v.$radius-large;
+    padding: v.$padding-56 v.$padding-50;
+    row-gap: v.$gap-m;
+    margin: 43px 0 0 0;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        padding: v.$padding-30;
+    }
+
+    @media (max-width: v.$breakpoint-mobile) {
+        margin-top: v.$margin-mobile-sm;
+        background-color: v.$secondary-color;
+        padding: 0;
+        flex-direction: column;
+        row-gap: v.$gap-mobile-s;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        width: 30.5%;
+        object-fit: cover;
+        box-shadow: v.$shadow-color;
+        border-radius: v.$radius-medium;
+        cursor: pointer;
+
+        &:hover h2 {
+            background:
+                linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(10, 10, 10, 0) 42%,
+                    rgba(4, 4, 4, 0.41) 100%,
+                    rgba(0, 0, 0, 1) 100%),
+                v.$primary-color;
+        }
+
+        @media (max-width: v.$breakpoint-tablet) {
+            width: 46%;
+            ;
+        }
+
+        @media (max-width: v.$breakpoint-mobile) {
+            box-shadow: none;
+            width: 100%;
+        }
+
+
+        img {
+            width: 100%;
+            border-top-left-radius: v.$radius-medium;
+            border-top-right-radius: v.$radius-medium;
+
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        h2 {
+            height: auto;
+            align-content: center;
+            flex-basis: fit-content;
+            border-bottom-left-radius: v.$radius-medium;
+            border-bottom-right-radius: v.$radius-medium;
+            @include m.text-primary;
+            flex-grow: 1;
+
+
+        }
+    }
+}
