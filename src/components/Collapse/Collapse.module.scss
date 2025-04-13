@@ -1,0 +1,62 @@
+@use '../../styles/variables' as v;
+@use '../../styles/mixins' as m;
+
+.collapse {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        width: 100%;
+        margin-bottom: 0;
+
+        button {
+            @include m.text-primary;
+            width: 100%;
+            border-radius: v.$radius-small;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 10px 20px 8px 15px;
+            cursor: pointer;
+
+
+            svg {
+                width: 24px;
+                height: 24px;
+                color: v.$secondary-color;
+                padding-left: auto;
+                transition: all 0.3s ease-in-out;
+
+            }
+        }
+    }
+
+    .content {
+        overflow: hidden;
+        height: 0px;
+        transition: height 0.3s ease-in-out;
+
+        p {
+            background-color: v.$background-light;
+            margin: 0;
+            border-radius: v.$radius-small;
+            padding: 13px 20px 19px 20px;
+
+        }
+    }
+
+    &.active {
+
+        h2 button svg {
+            transform: rotate(-180deg);
+
+        }
+
+        .content {
+            height: auto;
+        }
+
+    }
+}

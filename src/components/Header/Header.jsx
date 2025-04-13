@@ -1,4 +1,4 @@
-import Svg from '../Svg/Svg'
+import Svg from '../Svg/Logo'
 import { Link, useMatch } from 'react-router'
 import header from './Header.module.scss'
 

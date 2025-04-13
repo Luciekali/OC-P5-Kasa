@@ -1,5 +1,5 @@
 import './Footer.module.scss'
-import Svg from '../Svg/Svg'
+import Svg from '../Svg/Logo'
 
 function Footer() {
     return (

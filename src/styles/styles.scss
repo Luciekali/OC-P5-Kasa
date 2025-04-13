@@ -1,5 +1,8 @@
 @use './variables' as v;
 
+html {
+    overflow-y: scroll;
+}
 
 body {
     font-family: v.$font-primary;
@@ -41,4 +44,8 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+button {
+    border: none;
 }

@@ -1,4 +1,10 @@
+@use '../../styles/variables' as v;
+
 .banner {
     background-image: url('/src/assets/about.png');
     background-position: center;
+}
+
+section {
+    width: 80%;
 }
