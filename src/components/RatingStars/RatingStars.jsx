@@ -1,0 +1,25 @@
+import StarOn from '../../assets/svg/star-active.svg'
+import StarOff from '../../assets/svg/star-inactive.svg'
+import { useState, useEffect } from 'react'
+
+function RatingStars({ rating }) {
+    const ratingNumber = parseInt(rating)
+
+    const starActive = (Array(ratingNumber).fill(null))
+    const starInactive = (Array(5 - (ratingNumber)).fill(null))
+
+    const starActiveList = starActive.map((index) =>
+        <li index={index} key={index} ><img src={StarOn} alt='etoile colorée : le logement est évalué `${rating}`/5' /></li>)
+
+    const starInactiveList = starInactive.map((index) =>
+        <li index={index} key={index} ><img src={StarOff} alt='etoile colorée : le logement est évalué `${rating}`/5' /></li>)
+    return (
+        <ul>
+            {starActiveList}
+            {starInactiveList}
+        </ul>
+
+    )
+}
+
+export default RatingStars
