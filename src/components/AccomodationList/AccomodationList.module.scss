@@ -1,7 +1,7 @@
 @use '../../styles/variables' as v;
 @use '../../styles/mixins' as m;
 
-.logements {
+.accomodations {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,6 +11,7 @@
     padding: v.$padding-56 v.$padding-50;
     row-gap: v.$gap-m;
     margin: 43px 0 0 0;
+    width: 100%;
 
     @media (max-width: v.$breakpoint-tablet) {
         padding: v.$padding-30;
@@ -33,7 +34,7 @@
         border-radius: v.$radius-medium;
         cursor: pointer;
 
-        &:hover h2 {
+        &:active h2 {
             background:
                 linear-gradient(to bottom,
                     rgba(255, 255, 255, 0) 0%,
@@ -53,26 +54,30 @@
             width: 100%;
         }
 
+        a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
 
-        img {
-            width: 100%;
-            border-top-left-radius: v.$radius-medium;
-            border-top-right-radius: v.$radius-medium;
+            img {
+                width: 100%;
+                border-top-left-radius: v.$radius-medium;
+                border-top-right-radius: v.$radius-medium;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
 
-            aspect-ratio: 1/1;
-            object-fit: cover;
-        }
-
-        h2 {
-            height: auto;
-            align-content: center;
-            flex-basis: fit-content;
-            border-bottom-left-radius: v.$radius-medium;
-            border-bottom-right-radius: v.$radius-medium;
-            @include m.text-primary;
-            flex-grow: 1;
+            h2 {
+                height: auto;
+                align-content: center;
+                flex-basis: fit-content;
+                border-bottom-left-radius: v.$radius-medium;
+                border-bottom-right-radius: v.$radius-medium;
+                @include m.text-primary;
+                flex-grow: 1;
 
 
+            }
         }
     }
 }

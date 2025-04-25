@@ -1,4 +1,13 @@
-.banner {
-    background-image: url('/src/assets/home.png');
-    background-position: center;
+main {
+
+
+    .banner {
+        background-image: url('/src/assets/home.png');
+        background-position: center;
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
 }

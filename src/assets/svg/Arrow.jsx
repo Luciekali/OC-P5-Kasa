@@ -1,5 +1,6 @@
-const Arrow = ({ fill = "#ffffff", ariaLabel = "Flèche" }) => (
+const Arrow = ({ fill = "#ffffff", ariaLabel = "Flèche", className }) => (
     <svg
+        className={className}
         fill={fill}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"

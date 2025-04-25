@@ -1,5 +1,5 @@
 
-const Svg = ({ width = 211, height = 68, color = "currentColor" }) => (
+const Logo = ({ width = 211, height = 68, color = "currentColor" }) => (
     <svg
         width={width}
         height={height}
@@ -30,4 +30,4 @@ const Svg = ({ width = 211, height = 68, color = "currentColor" }) => (
     </svg>
 );
 
-export default Svg;
+export default Logo;

@@ -14,7 +14,8 @@ function About() {
                     <Collapse
                         key={index}
                         title={collapse.title}
-                        description={collapse.description} />
+                        content={<p>{collapse.description}</p>}
+                    />
                 ))
                 }
             </section>

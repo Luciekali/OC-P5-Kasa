@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner/Banner'
-import LogementItem from '../../components/LogementItem/LogementItem'
+import AccomodationList from '../../components/AccomodationList/AccomodationList'
 import styles from './Home.module.scss'
 
 function Home() {
@@ -8,9 +8,7 @@ function Home() {
             <Banner className={styles.banner}>
                 <h1>Chez vous, partout et ailleurs</h1>
             </Banner>
-            <section>
-                <LogementItem />
-            </section>
+            <AccomodationList />
         </main>
     )
 }

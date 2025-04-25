@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react"
 import styles from './Collapse.module.scss'
-import Arrow from '../Svg/arrow_collapse'
+import Arrow from '../../assets/svg/Arrow'
 
-function Collapse({ title, description }) {
+function Collapse({ title, content, }) {
 
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
@@ -18,18 +18,15 @@ function Collapse({ title, description }) {
         <div className={`${styles.collapse} 
                         ${isOpen ? styles.active : styles.inactive}`}>
             <h2>
-                <button onClick={() => setIsOpen(!isOpen)}>
-                    {title}
-                    <Arrow className={styles.arrow} />
-                </button>
-
+                <label> <input type='button' onClick={() => setIsOpen(!isOpen)} />{title}
+                    <Arrow className={styles.arrow} /></label>
             </h2>
 
 
             <div className={styles.content}
                 ref={contentRef}
                 style={{ height }}>
-                <p>{description}</p></div>
+                {content}</div>
 
         </div>
 

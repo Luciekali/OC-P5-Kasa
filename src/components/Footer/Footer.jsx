@@ -1,10 +1,10 @@
 import './Footer.module.scss'
-import Svg from '../Svg/Logo'
+import Logo from '../../assets/svg/Logo'
 
 function Footer() {
     return (
         <footer>
-            <Svg />
+            <Logo />
             <p>© 2020 Kasa. All rights reserved</p>
         </footer>
     )

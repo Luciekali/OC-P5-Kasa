@@ -1,0 +1,15 @@
+@use '../../styles/variables' as v;
+
+.tags {
+    background-color: v.$secondary-color;
+    padding: 0;
+    margin: 0;
+
+    li {
+        background-color: v.$primary-color;
+        color: v.$secondary-color;
+        text-align: center;
+        padding: 3px 0 3px 0;
+        box-shadow: none;
+    }
+}
