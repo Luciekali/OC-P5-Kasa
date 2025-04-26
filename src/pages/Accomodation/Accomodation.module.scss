@@ -1,5 +1,59 @@
+@use '../../styles/variables' as v;
+
 main {
     .accomodation {
         width: 100%;
+
+        .wrapper_informations {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 30px;
+
+            .accomodation_informations {
+                h2 {
+                    color: v.$primary-color;
+                    font-size: v.$font-size-lg;
+                    font-weight: v.$font-weight-medium;
+                    margin: 0px;
+                }
+            }
+
+            .wrapper_host {
+                .host_informations {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    p {
+                        color: v.$primary-color;
+                        margin-right: 10px;
+                    }
+
+                    img {
+                        border-radius: v.$radius-circle;
+                        width: 64px;
+                        background-color: v.$background-dark;
+                    }
+
+
+                }
+
+
+                @media (max-width: v.$breakpoint-tablet) {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+
+
+            @media (max-width: v.$breakpoint-tablet) {
+                flex-direction: column;
+            }
+        }
+
+
     }
 }

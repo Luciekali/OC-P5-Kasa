@@ -4,12 +4,21 @@
     background-color: v.$secondary-color;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 10px;
 
     li {
         background-color: v.$primary-color;
         color: v.$secondary-color;
-        text-align: center;
-        padding: 3px 0 3px 0;
+        font-weight: v.$font-weight-bold;
+        font-size: v.$font-size-xs;
+        padding: 3px 37px;
+        margin-right: 10px;
         box-shadow: none;
+        border-radius: v.$radius-medium;
+        align-content: center;
     }
+
 }

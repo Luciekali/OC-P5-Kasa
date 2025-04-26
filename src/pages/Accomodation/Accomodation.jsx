@@ -16,21 +16,21 @@ function Accomodation() {
         <main>
             <Slideshow accomodation={accomodation}></Slideshow>
             <section className={styles.accomodation} >
-                <div>
-                    <div>
+                <div className={styles.wrapper_informations}>
+                    <div className={styles.accomodation_informations}>
                         <h2>{accomodation.title}</h2>
                         <p>{accomodation.location}</p>
                         <TagsList tags={accomodation.tags} />
                     </div>
-                    <div>
-                        <div>
+                    <div className={styles.wrapper_host}>
+                        <div className={styles.host_informations}>
                             <p>{accomodation.host.name}</p>
                             <img src={accomodation.host.picture}></img>
                         </div>
                         <RatingStars rating={accomodation.rating} />
                     </div>
                 </div>
-                <div>
+                <div className={styles.collapses_wrapper}>
                     <Collapse title={'Description'}
                         content={<p>{accomodation.description}</p>} />
                     <Collapse title={'Equipements'}
