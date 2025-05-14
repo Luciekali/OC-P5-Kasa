@@ -4,19 +4,17 @@
 .slideshow {
     display: flex;
     position: relative;
-    align-self: center;
-    padding-left: 20px;
-    max-height: 415px;
+    width: 100%;
 
     .slide {
-
+        width: 100%;
         object-fit: cover;
-        align-content: center;
         border-radius: v.$radius-large;
+        height: 415px;
 
         @media (max-width: v.$breakpoint-mobile) {
             border-radius: v.$radius-medium;
-
+            height: 255px;
         }
     }
 

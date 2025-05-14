@@ -4,7 +4,7 @@ main {
 
     .accomodation {
         width: 100%;
-
+        margin-bottom: v.$margin-medium ;
 
         .wrapper_informations {
             display: flex;
@@ -14,6 +14,9 @@ main {
             width: 100%;
 
             .accomodation_informations {
+                overflow: hidden;
+                width: 100%;
+
                 h2 {
                     color: v.$primary-color;
                     font-size: v.$font-size-lg;

@@ -5,15 +5,14 @@
     flex-direction: column;
     min-height: 100vh;
 
+
     main {
-        max-width: 1440px;
         display: flex;
         flex-direction: column;
-        align-self: center;
-        margin: 0 100px 50px 100px;
-        width: 100%;
-        box-sizing: border-box;
-
+        align-items: center;
+        margin: auto;
+        width: 87%;
+        max-width: 1440px;
 
         @media (max-width: v.$breakpoint-tablet) {
             margin: 0 40px 30px 40px;

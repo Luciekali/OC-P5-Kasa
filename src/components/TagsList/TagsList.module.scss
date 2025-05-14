@@ -9,12 +9,13 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
+
+    flex-grow: 0;
 
     @media (max-width: v.$breakpoint-tablet) {
-        overflow-x: scroll;
 
+        overflow-x: scroll;
+        scrollbar-width: none;
     }
 
     li {
