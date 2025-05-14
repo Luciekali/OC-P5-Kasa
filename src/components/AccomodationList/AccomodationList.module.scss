@@ -11,7 +11,7 @@
     padding: v.$padding-56 v.$padding-50;
     row-gap: v.$gap-m;
     margin: 43px 0 0 0;
-    width: 100%;
+    width: calc(100% - (v.$padding-50 *2));
 
     @media (max-width: v.$breakpoint-tablet) {
         padding: v.$padding-30;
@@ -32,7 +32,7 @@
         object-fit: cover;
         box-shadow: v.$shadow-color;
         border-radius: v.$radius-medium;
-        cursor: pointer;
+        height: auto;
 
         &:active h2 {
             background:
@@ -46,7 +46,6 @@
 
         @media (max-width: v.$breakpoint-tablet) {
             width: 46%;
-            ;
         }
 
         @media (max-width: v.$breakpoint-mobile) {
@@ -54,30 +53,25 @@
             width: 100%;
         }
 
-        a {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+        img {
+            width: 100%;
+            border-top-left-radius: v.$radius-medium;
+            border-top-right-radius: v.$radius-medium;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            cursor: pointer;
+        }
 
-            img {
-                width: 100%;
-                border-top-left-radius: v.$radius-medium;
-                border-top-right-radius: v.$radius-medium;
-                aspect-ratio: 1/1;
-                object-fit: cover;
-            }
-
-            h2 {
-                height: auto;
-                align-content: center;
-                flex-basis: fit-content;
-                border-bottom-left-radius: v.$radius-medium;
-                border-bottom-right-radius: v.$radius-medium;
-                @include m.text-primary;
-                flex-grow: 1;
-
-
-            }
+        h2 {
+            height: auto;
+            align-content: center;
+            flex-basis: fit-content;
+            border-bottom-left-radius: v.$radius-medium;
+            border-bottom-right-radius: v.$radius-medium;
+            @include m.text-primary;
+            flex-grow: 1;
+            cursor: pointer;
+            padding: 20px;
         }
     }
 }

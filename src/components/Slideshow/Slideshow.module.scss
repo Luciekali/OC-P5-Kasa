@@ -2,17 +2,22 @@
 @use '../../styles/mixins' as m;
 
 .slideshow {
-    width: 100%;
     display: flex;
     position: relative;
-    overflow: hidden;
+    align-self: center;
+    padding-left: 20px;
+    max-height: 415px;
 
     .slide {
-        max-height: 415px;
-        width: 100%;
+
         object-fit: cover;
         align-content: center;
         border-radius: v.$radius-large;
+
+        @media (max-width: v.$breakpoint-mobile) {
+            border-radius: v.$radius-medium;
+
+        }
     }
 
 
@@ -22,16 +27,29 @@
         justify-content: space-between;
         align-items: center;
         inset: 0;
+        width: 100%;
 
         button {
             background: transparent;
             border: none;
             font-size: 0;
+            padding: 0 20px;
+
+
 
             img {
                 height: 79px;
                 width: 47px;
                 cursor: pointer;
+
+                @media (max-width: v.$breakpoint-tablet) {
+                    height: 47px;
+                }
+
+                @media (max-width: v.$breakpoint-mobile) {
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             .arrow_left {
@@ -49,5 +67,9 @@
         padding-left: 48%;
         margin: 0;
         padding-bottom: 28px;
+
+        @media (max-width: v.$breakpoint-mobile) {
+            display: none;
+        }
     }
 }

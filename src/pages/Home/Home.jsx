@@ -3,6 +3,7 @@ import AccomodationList from '../../components/AccomodationList/AccomodationList
 import styles from './Home.module.scss'
 
 function Home() {
+
     return (
         <main>
             <Banner className={styles.banner}>

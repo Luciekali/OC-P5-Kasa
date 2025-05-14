@@ -3,4 +3,10 @@
 .rating_list {
     display: flex;
     padding-left: 0;
+
+    li img {
+        @media (max-width: v.$breakpoint-mobile) {
+            width: 18px;
+        }
+    }
 }

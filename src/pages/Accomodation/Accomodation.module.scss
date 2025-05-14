@@ -1,14 +1,17 @@
 @use '../../styles/variables' as v;
 
 main {
+
     .accomodation {
         width: 100%;
+
 
         .wrapper_informations {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             padding-top: 30px;
+            width: 100%;
 
             .accomodation_informations {
                 h2 {
@@ -16,6 +19,20 @@ main {
                     font-size: v.$font-size-lg;
                     font-weight: v.$font-weight-medium;
                     margin: 0px;
+                    padding-right: 5%;
+
+                    @media (max-width: v.$breakpoint-mobile) {
+                        font-size: v.$font-size-xl-mobile;
+                    }
+                }
+
+                p {
+                    font-size: v.$font-size-sm;
+                    font-weight: v.$font-weight-medium;
+
+                    @media (max-width: v.$breakpoint-mobile) {
+                        font-size: v.$font-size-lg-mobile;
+                    }
                 }
             }
 
@@ -28,12 +45,20 @@ main {
                     p {
                         color: v.$primary-color;
                         margin-right: 10px;
+
+                        @media (max-width: v.$breakpoint-mobile) {
+                            font-size: v.$font-size-sm-mobile;
+                        }
                     }
 
                     img {
                         border-radius: v.$radius-circle;
                         width: 64px;
                         background-color: v.$background-dark;
+
+                        @media (max-width: v.$breakpoint-mobile) {
+                            width: 24px;
+                        }
                     }
 
 

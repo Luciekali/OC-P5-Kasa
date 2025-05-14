@@ -5,6 +5,8 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: v.$margin-small v.$margin-large v.$margin-medium v.$margin-large;
+    max-width: 1440px;
+    justify-self: center;
 
     @media (max-width: v.$breakpoint-tablet) {
         margin: v.$margin-mobile-s v.$margin-mobile-s v.$margin-mobile-sm v.$margin-mobile-s;

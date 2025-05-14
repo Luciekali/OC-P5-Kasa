@@ -6,19 +6,33 @@
     margin: 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-    padding-right: 10px;
+    gap: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @media (max-width: v.$breakpoint-tablet) {
+        overflow-x: scroll;
+
+    }
 
     li {
         background-color: v.$primary-color;
         color: v.$secondary-color;
         font-weight: v.$font-weight-bold;
         font-size: v.$font-size-xs;
-        padding: 3px 37px;
-        margin-right: 10px;
-        box-shadow: none;
+        padding: 3px 30px;
         border-radius: v.$radius-medium;
         align-content: center;
+        text-wrap: nowrap;
+
+
+        @media (max-width: v.$breakpoint-mobile) {
+            font-size: v.$font-size-xs-mobile;
+
+        }
+
     }
 
 }

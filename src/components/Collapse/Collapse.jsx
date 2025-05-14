@@ -22,11 +22,11 @@ function Collapse({ title, content, }) {
                     <Arrow className={styles.arrow} /></label>
             </h2>
 
-
             <div className={styles.content}
                 ref={contentRef}
                 style={{ height }}>
-                {content}</div>
+                {content}
+            </div>
 
         </div>
 
