@@ -2,10 +2,13 @@ import './Footer.module.scss'
 import Logo from '../../assets/svg/Logo'
 
 function Footer() {
+    const date = new Date()
+    const year = date.getFullYear()
+
     return (
         <footer>
             <Logo />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <p>© {year} Kasa. All rights reserved</p>
         </footer>
     )
 }
