@@ -5,18 +5,15 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    margin-bottom: 0px !important;
-    justify-content: space-evenly;
-
+    justify-content: center;
+    flex-grow: 1;
+    gap: 139px;
 
     p {
         color: v.$primary-color;
         font-size: v.$font-size-xxl;
         font-weight: v.$font-weight-bold;
-        margin: 0;
-        line-height: 0.91;
-
-
+        margin: 139px 0 0 0;
 
         @media(max-width: v.$breakpoint-tablet) {
             font-size: v.$font-size-xxxxl-mobile;
@@ -24,10 +21,9 @@
 
         @media(max-width: v.$breakpoint-mobile) {
             font-size: v.$font-size-xxxl-mobile;
+            margin: 113px 0 0 0;
         }
     }
-
-
 
     h2 {
         color: v.$primary-color;
@@ -39,8 +35,6 @@
         @media(max-width: v.$breakpoint-mobile) {
             font-size: v.$font-size-xl-mobile;
         }
-
-
     }
 
     a {
@@ -48,12 +42,14 @@
         font-weight: v.$font-weight-medium;
         text-decoration: underline 1px;
         cursor: pointer;
-        margin: 0;
+        margin: 0 0 139px 0;
 
         @media(max-width: v.$breakpoint-tablet) {
             font-size: v.$font-size-lg-mobile;
         }
     }
 
-    @media(max-width: v.$breakpoint-tablet) {}
+    @media(max-width: v.$breakpoint-tablet) {
+        gap: 113px;
+    }
 }
