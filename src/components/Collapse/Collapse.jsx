@@ -6,11 +6,11 @@ function Collapse({ title, content, }) {
 
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
-    const [height, setHeight] = useState('0px');
+    const [height, setHeight] = useState('0');
 
     useEffect(() => {
         if (contentRef.current) {
-            setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : '0px');
+            setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : '0');
         }
     }, [isOpen]);
     return (

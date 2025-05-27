@@ -42,7 +42,8 @@ function Slideshow({ accomodation }) {
                             <img src={arrow} className={styles.arrow_right} />
                         </button>
                     </span>
-                    <p>{currentImage + 1}/{pictures.length}</p></>
+                    <p>{currentImage + 1}/{pictures.length}</p>
+                </>
             }
         </section>
     )

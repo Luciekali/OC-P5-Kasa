@@ -9,9 +9,12 @@ import RatingStars from '../../components/RatingStars/RatingStars';
 import { useEffect } from 'react';
 
 function Accomodation() {
+
     const navigate = useNavigate()
     const { id } = useParams();
     const accomodation = accomodations.find((item) => item.id === id)
+
+
 
     useEffect(() => {
 
@@ -21,6 +24,11 @@ function Accomodation() {
     }, [accomodation, navigate]);
 
     if (!accomodation) return null;
+
+    const hostName = accomodation.host.name
+    const words = hostName.split(" ")
+    const firstName = words[0]
+    const lastName = words[1]
 
     return (
         <main>
@@ -34,7 +42,10 @@ function Accomodation() {
                     </div>
                     <div className={styles.wrapper_host}>
                         <div className={styles.host_informations}>
-                            <p>{accomodation.host.name}</p>
+                            <div className={styles.host_name}>
+                                <p> {firstName} </p>
+                                <p> {lastName} </p>
+                            </div>
                             <img src={accomodation.host.picture}></img>
                         </div>
                         <RatingStars rating={accomodation.rating} />
