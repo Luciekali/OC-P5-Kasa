@@ -13,7 +13,8 @@
         color: v.$primary-color;
         font-size: v.$font-size-xxl;
         font-weight: v.$font-weight-bold;
-        margin: 139px 0 0 0;
+        margin: 0;
+        line-height: 1;
 
         @media(max-width: v.$breakpoint-tablet) {
             font-size: v.$font-size-xxxxl-mobile;
