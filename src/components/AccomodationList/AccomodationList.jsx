@@ -2,7 +2,7 @@ import styles from './AccomodationList.module.scss'
 import accomodations from '../../datas/accomodations.json'
 import { useNavigate } from 'react-router'
 
-function AccomodationItem() {
+function AccomodationList() {
     const navigate = useNavigate()
     const handleNavigate = id => navigate(`/accomodation/${id}`)
 
@@ -24,4 +24,5 @@ function AccomodationItem() {
     )
 }
 
-export default AccomodationItem
+export default AccomodationList
+

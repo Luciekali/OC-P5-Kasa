@@ -7,4 +7,10 @@
 
 section {
     width: 80%;
+    margin-bottom: 38px;
+    margin-top: 16px;
+
+    @media (max-width: v.$breakpoint-mobile) {
+        margin: 0;
+    }
 }
